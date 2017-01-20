@@ -93,6 +93,8 @@ quiz_list = [["vocabulary","You just arrived at a party and the host asks if "\
 
 blanks = ["___1___", "___2___", "___3___", "___4___"]
 
+max_attempts = 4
+
 correct_response_q123 = "\nCorrect answer! Nice work! Onwards!\n"
 
 correct_final_q = "\nYou betcha! You answered all of the questions correctly! "\
@@ -108,10 +110,11 @@ game_over = "\nSorry, that is incorrect and you're out of guesses. Game over!"\
 "real nice people, don'tcha know?! \n"
 
 
+
 def guesses_remaining(attempt_count):
     """Takes attempt number as input.
     Outputs text informing user of number of guesses remaining."""
-    number = 4 - attempt_count
+    number = max_attempts - attempt_count
     print number
     return " You've got " + str(number) + " guesses remaining.\n"
 
@@ -119,7 +122,7 @@ def guesses_remaining(attempt_count):
 def respond_correct_answer(blank_count):
     """Takes blank_count as input.
     Outputs the appropriate game response to a correct answer for that blank."""
-    if blank_count == 4:
+    if blank_count == len(blanks):
         return correct_final_q
     else:
         return correct_response_q123
@@ -129,7 +132,7 @@ def respond_incorrect_answer(attempt_count, answers, blank_count, hints):
     """Takes attempt_count, answers, blank_count, and hints as input.
     Outputs appropriate game reponse to an incorrect answer for that blank,
     attempt number, and choice of hints."""
-    if attempt_count == 4:
+    if attempt_count == max_attempts:
         return game_over
     if hints == True and attempt_count == 2:
         return (incorrect_hint + answers[blank_count-1][0] + "." + guesses_remaining(attempt_count))
@@ -163,11 +166,11 @@ def run_quiz(quiz, answers, blanks, hints):
     blank_count = 1
     for i in blanks:
         attempt_count = 1
-        while attempt_count <= 4:
+        while attempt_count <= max_attempts:
             if check_user_answer(quiz, answers, blanks, blank_count) == True:
                 print respond_correct_answer(blank_count)
                 quiz = quiz.replace(blanks[blank_count - 1], answers[blank_count-1])
-                if blank_count != 4:
+                if blank_count != len(blanks):
                     blank_count = blank_count + 1
                     attempt_count = 1
                 else:
