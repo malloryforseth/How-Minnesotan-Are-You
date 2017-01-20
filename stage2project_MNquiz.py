@@ -56,7 +56,8 @@ quiz_list = [["vocabulary","You just arrived at a party and the host asks if "\
 "between coughs. Need a fizzy chaser to wash it down? Better know what to ask "\
 "for! It's called ___3___ around these parts. Dying for the recipe for that "\
 "delicious, bubbly, oven-baked medley dish from the party buffet table? Don't "\
-"disgrace the chef with the 'c' word. We don't care what you fancy pants call it, us salt of the earth folks know it as ___4___. Respect.", ["betcha",
+"disgrace the chef with the 'c' word. We don't care what you fancy pants call "\
+" it, us salt of the earth folks know it as ___4___. Respect.", ["betcha",
 "uffda", "pop", "hotdish"]], ["social niceties","First, it's important to "\
 "understand that the number one topic of conversation in Minnesota is the "\
 "___1___. Always. Get used to talking about it at length. Every day. In both "\
@@ -86,7 +87,8 @@ quiz_list = [["vocabulary","You just arrived at a party and the host asks if "\
 "months of car sweeping, ___2___  and ___3___ raffles, you better believe "\
  "you'll be celebrating the arrival of spring. It's March, and the "\
  "thermometer just hit a whopping 40 degrees. Show your excitement like a "\
- "Minnesotan by busting those ___4___ out of the closet first thing. Who cares if there's still snow on the ground? You feel so...free.", ["broom",
+ "Minnesotan by busting those ___4___ out of the closet first thing. Who "\
+ "cares if there's still snow on the ground? You feel so...free.", ["broom",
  "ice fishing", "meat", "shorts"]]]
 
 blanks = ["___1___", "___2___", "___3___", "___4___"]
